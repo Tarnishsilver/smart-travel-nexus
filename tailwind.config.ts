@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			borderWidth: {
+				'3': '3px',
+			},
 			colors: {
 				primary: '#6c5ce7',
 				'primary-light': '#a29bfe',
