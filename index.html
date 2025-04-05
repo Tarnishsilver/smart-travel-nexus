@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -132,6 +131,94 @@
       </div>
     </section>
     
+    <!-- Vacation Search Section -->
+    <section class="vacation-search-section" id="search">
+      <div class="container">
+        <div class="search-container glass-card">
+          <h2>Find Your Dream Vacation</h2>
+          
+          <div class="search-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <div class="input-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <input type="text" id="destination" placeholder="Where do you want to go?" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="duration">Duration</label>
+                <div class="input-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <input type="text" id="duration" placeholder="How many days?" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Budget</label>
+                <div class="input-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <input type="text" id="budget" placeholder="Your budget" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="season">Season</label>
+                <div class="input-wrapper select-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                  <select id="season" class="custom-select">
+                    <option value="">Any season</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="autumn">Autumn</option>
+                    <option value="winter">Winter</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="travel-mode">Travel Mode</label>
+                <div class="input-wrapper select-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <select id="travel-mode" class="custom-select">
+                    <option value="">Any mode</option>
+                    <option value="flight">Flight</option>
+                    <option value="train">Train</option>
+                    <option value="car">Car</option>
+                    <option value="cruise">Cruise</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="luxury-level">Luxury Level</label>
+                <div class="input-wrapper select-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <select id="luxury-level" class="custom-select">
+                    <option value="">Any level</option>
+                    <option value="budget">Budget</option>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="luxury">Luxury</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="search-actions">
+              <button id="search-btn" class="btn-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                Find Travel Options
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Chatbot Section -->
     <section class="chatbot-section" id="chatbot">
       <div class="container">
@@ -212,5 +299,47 @@
     </footer>
     
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize custom dropdowns
+        const selectElements = document.querySelectorAll('.custom-select');
+        
+        selectElements.forEach(select => {
+          const selectedValue = select.options[select.selectedIndex].text;
+          select.parentNode.setAttribute('data-value', selectedValue);
+          
+          select.addEventListener('change', function() {
+            const selectedValue = this.options[this.selectedIndex].text;
+            this.parentNode.setAttribute('data-value', selectedValue);
+          });
+        });
+
+        // Search button functionality
+        const searchBtn = document.getElementById('search-btn');
+        if (searchBtn) {
+          searchBtn.addEventListener('click', function() {
+            const destination = document.getElementById('destination').value;
+            const duration = document.getElementById('duration').value;
+            const budget = document.getElementById('budget').value;
+            const season = document.getElementById('season').value;
+            const travelMode = document.getElementById('travel-mode').value;
+            const luxuryLevel = document.getElementById('luxury-level').value;
+            
+            // For now, just log the values to console
+            console.log({
+              destination,
+              duration,
+              budget,
+              season,
+              travelMode,
+              luxuryLevel
+            });
+            
+            // Show a success message (can be replaced with actual form submission)
+            alert('Search request submitted! We will find the best options for your dream vacation.');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
