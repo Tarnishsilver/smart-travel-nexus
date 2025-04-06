@@ -1,122 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Travel Nexus</title>
-    <meta name="description" content="AI-powered travel planning assistant" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="Smart Travel Nexus" />
-    <meta property="og:description" content="AI-powered travel planning assistant" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  </head>
-
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Travel Nexus</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</head>
+<body class="bg-darker">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="flex justify-between items-center">
         <div class="navbar-logo">
-          <a href="/">
-            <span class="text-primary">Smart</span>Travel Nexus
+          <a href="/" class="flex items-center gap-2 text-light font-bold text-2xl">
+            <span class="text-primary-light">Smart</span>Travel Nexus
           </a>
         </div>
         
-        <ul class="navbar-links">
-          <li><a href="/" class="active">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Features</a>
-            <ul class="dropdown-content">
-              <li><a href="#chatbot">Chatbot</a></li>
-              <li><a href="#">Chatroom</a></li>
-              <li><a href="#">Maps</a></li>
-              <li><a href="#">Weather</a></li>
-              <li><a href="#">AI Doc</a></li>
-              <li><a href="#">Data Scraper</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Destinations</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
+        <div class="hidden md:block">
+          <ul class="navbar-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Features</a>
+              <ul class="dropdown-content">
+                <li><a href="#chatbot">Chatbot</a></li>
+                <li><a href="#chatrooms">Chatroom</a></li>
+                <li><a href="#maps">Maps</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#docs">AI Doc</a></li>
+              </ul>
+            </li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
         
         <div class="navbar-buttons">
-          <a href="#" class="btn-outline">Log in</a>
-          <a href="#" class="btn-primary">Sign up</a>
+          <button class="btn-outline hidden sm:inline-block">Log in</button>
+          <button class="btn-primary">Sign up</button>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="background-animation" id="backgroundAnimation"></div>
     
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="background-animation">
-        <div class="travel-icon" style="left: 10%; animation-delay: 0s;">✈️</div>
-        <div class="travel-icon" style="left: 20%; animation-delay: 2s;">📍</div>
-        <div class="travel-icon" style="left: 30%; animation-delay: 4s;">📅</div>
-        <div class="travel-icon" style="left: 45%; animation-delay: 1s;">✈️</div>
-        <div class="travel-icon" style="left: 55%; animation-delay: 5s;">📍</div>
-        <div class="travel-icon" style="left: 65%; animation-delay: 2.5s;">🔍</div>
-        <div class="travel-icon" style="left: 80%; animation-delay: 3.5s;">📅</div>
-        <div class="travel-icon" style="left: 90%; animation-delay: 1.5s;">✈️</div>
-      </div>
-      
-      <div class="container">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
         <div class="hero-content">
-          <h1>Discover the world with intelligent travel planning</h1>
-          <p>Plan your perfect trip with our AI-powered travel assistant. Get personalized itineraries, real-time weather updates, and connect with fellow travelers all in one place.</p>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 font-poppins bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent leading-tight">
+            Discover the world with intelligent travel planning
+          </h1>
+          <p class="text-lg mb-8 text-[#bcb6fd]">
+            Plan your perfect trip with our AI-powered travel assistant. Get personalized itineraries, real-time weather updates, and connect with fellow travelers all in one place.
+          </p>
           <div class="hero-buttons">
-            <a href="#" class="btn-primary btn-large">Start Planning</a>
-            <a href="#search" class="btn-outline">Find Destinations</a>
+            <button class="btn-primary btn-large">
+              Start Planning
+            </button>
+            <a href="#search" class="btn-outline flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              Find Destinations
+            </a>
           </div>
         </div>
         
         <div class="hero-visual">
           <div class="map-card">
-            <h3>Popular Destinations</h3>
-            <div class="live-update">
-              <span class="pulse-dot"></span>
-              <span>Live Updates</span>
+            <div class="flex justify-between items-center mb-4">
+              <h3>Popular Destinations</h3>
+              <div class="live-update">
+                <span class="pulse-dot"></span>
+                <span class="text-sm text-light-gray">Live Updates</span>
+              </div>
             </div>
             
             <div class="world-map">
-              <!-- Simple world map visualization -->
               <svg width="100%" height="100%" viewBox="0 0 450 250">
+                <!-- Simple world map outline -->
                 <path 
                   d="M50,125 C100,50 150,100 200,75 C250,50 300,100 350,75 C400,50 450,125 400,180 C350,235 300,180 250,200 C200,220 150,180 100,200 C50,220 0,150 50,125 Z" 
                   class="map-outline"
                 />
                 
                 <!-- Map points -->
-                <g class="map-point" style="--x: 200px; --y: 100px;">
+                <g class="map-point" data-city="Paris" data-rating="4.8">
                   <circle cx="200" cy="100" r="6"></circle>
                   <circle cx="200" cy="100" r="12" class="pulse"></circle>
-                  <text x="210" y="100">Paris</text>
+                  <text x="210" y="100" class="city">Paris</text>
                   <text x="210" y="115" class="rating">★ 4.8</text>
                 </g>
-                
-                <g class="map-point" style="--x: 150px; --y: 150px;">
+                <g class="map-point" data-city="London" data-rating="4.7">
                   <circle cx="150" cy="150" r="6"></circle>
                   <circle cx="150" cy="150" r="12" class="pulse"></circle>
-                  <text x="160" y="150">London</text>
+                  <text x="160" y="150" class="city">London</text>
                   <text x="160" y="165" class="rating">★ 4.7</text>
                 </g>
-                
-                <g class="map-point" style="--x: 300px; --y: 120px;">
+                <g class="map-point" data-city="Rome" data-rating="4.9">
                   <circle cx="300" cy="120" r="6"></circle>
                   <circle cx="300" cy="120" r="12" class="pulse"></circle>
-                  <text x="310" y="120">Rome</text>
+                  <text x="310" y="120" class="city">Rome</text>
                   <text x="310" y="135" class="rating">★ 4.9</text>
+                </g>
+                <g class="map-point" data-city="New York" data-rating="4.6">
+                  <circle cx="100" cy="200" r="6"></circle>
+                  <circle cx="100" cy="200" r="12" class="pulse"></circle>
+                  <text x="110" y="200" class="city">New York</text>
+                  <text x="110" y="215" class="rating">★ 4.6</text>
+                </g>
+                <g class="map-point" data-city="Tokyo" data-rating="4.9">
+                  <circle cx="350" cy="180" r="6"></circle>
+                  <circle cx="350" cy="180" r="12" class="pulse"></circle>
+                  <text x="360" y="180" class="city">Tokyo</text>
+                  <text x="360" y="195" class="rating">★ 4.9</text>
                 </g>
               </svg>
               
@@ -129,257 +130,261 @@
           </div>
         </div>
       </div>
-    </section>
-    
-    <!-- Vacation Search Section -->
-    <section class="vacation-search-section" id="search">
-      <div class="container">
-        <div class="search-container glass-card">
-          <h2>Find Your Dream Vacation</h2>
+    </div>
+  </section>
+
+  <!-- Vacation Search Section -->
+  <section class="vacation-search-section" id="search">
+    <div class="container">
+      <div class="search-container">
+        <h2>Find Your Perfect Vacation</h2>
+        <div class="search-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <div class="input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <input type="text" id="destination" placeholder="Where do you want to go?" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="duration">Trip Duration</label>
+              <div class="select-wrapper input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                </span>
+                <select id="duration" class="custom-select">
+                  <option value="">Select duration</option>
+                  <option value="weekend">Weekend Getaway (1-3 days)</option>
+                  <option value="week">Short Trip (4-7 days)</option>
+                  <option value="two_weeks">Vacation (8-14 days)</option>
+                  <option value="long">Extended Trip (15+ days)</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <div class="select-wrapper input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </span>
+                <select id="budget" class="custom-select">
+                  <option value="">Select budget</option>
+                  <option value="budget">Budget Friendly (Under $500)</option>
+                  <option value="moderate">Moderate ($500-$1500)</option>
+                  <option value="luxury">Luxury ($1500-$5000)</option>
+                  <option value="ultra">Ultra Luxury ($5000+)</option>
+                </select>
+              </div>
+            </div>
+          </div>
           
-          <div class="search-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="destination">Destination</label>
-                <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  <input type="text" id="destination" placeholder="Where do you want to go?" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="duration">Duration</label>
-                <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  <input type="text" id="duration" placeholder="How many days?" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="budget">Budget</label>
-                <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                  <input type="text" id="budget" placeholder="Your budget" />
-                </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="season">Season</label>
+              <div class="select-wrapper input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </span>
+                <select id="season" class="custom-select">
+                  <option value="">Select season</option>
+                  <option value="spring">Spring (Mar-May)</option>
+                  <option value="summer">Summer (Jun-Aug)</option>
+                  <option value="fall">Fall (Sep-Nov)</option>
+                  <option value="winter">Winter (Dec-Feb)</option>
+                </select>
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="season">Season</label>
-                <div class="input-wrapper select-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                  <select id="season" class="custom-select">
-                    <option value="">Any season</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="autumn">Autumn</option>
-                    <option value="winter">Winter</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="travel-mode">Travel Mode</label>
-                <div class="input-wrapper select-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <select id="travel-mode" class="custom-select">
-                    <option value="">Any mode</option>
-                    <option value="flight">Flight</option>
-                    <option value="train">Train</option>
-                    <option value="car">Car</option>
-                    <option value="cruise">Cruise</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="luxury-level">Luxury Level</label>
-                <div class="input-wrapper select-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <select id="luxury-level" class="custom-select">
-                    <option value="">Any level</option>
-                    <option value="budget">Budget</option>
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
-                    <option value="luxury">Luxury</option>
-                  </select>
-                </div>
+            
+            <div class="form-group">
+              <label for="travel-mode">Travel Mode</label>
+              <div class="select-wrapper input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0 0-3 2.1 2.1 0 0 0-3 0L13 8l-8.2-1.8a.8.8 0 0 0-.9 1.2L6 10.5l-3.1 3.1a.8.8 0 0 0 0 1.2l.7.7.9-.3 3-1.2a5.5 5.5 0 0 0 .8.8l-1.2 3-.3.9.7.7a.8.8 0 0 0 1.2 0l3.1-3.1 3.1 2.1a.8.8 0 0 0 1.2-.9Z"/></svg>
+                </span>
+                <select id="travel-mode" class="custom-select">
+                  <option value="">Select travel mode</option>
+                  <option value="flight">Flight</option>
+                  <option value="car">Car/Road Trip</option>
+                  <option value="train">Train</option>
+                  <option value="cruise">Cruise</option>
+                  <option value="mixed">Mixed/Multimodal</option>
+                </select>
               </div>
             </div>
-
-            <div class="search-actions">
-              <button id="search-btn" class="btn-search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                Find Travel Options
-              </button>
+            
+            <div class="form-group">
+              <label for="luxury-level">Experience Level</label>
+              <div class="select-wrapper input-wrapper">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </span>
+                <select id="luxury-level" class="custom-select">
+                  <option value="">Select experience</option>
+                  <option value="basic">Basic (Hostels/2-Star)</option>
+                  <option value="comfortable">Comfortable (3-Star)</option>
+                  <option value="upscale">Upscale (4-Star)</option>
+                  <option value="luxury">Luxury (5-Star)</option>
+                </select>
+              </div>
             </div>
+          </div>
+          
+          <div class="search-actions">
+            <button id="search-btn" class="btn-search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              Find Perfect Vacation
+            </button>
           </div>
         </div>
       </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-      <div class="container">
-        <h2 class="section-title">Smart Travel Features</h2>
-        
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path></svg>
-            </div>
-            <h3 class="feature-title">AI Travel Chatbot</h3>
-            <p class="feature-desc">Get instant answers to all your travel questions with our intelligent assistant trained on travel data.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <h2 class="section-title">Smart Travel Features</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <h3 class="feature-title">Travel Chatrooms</h3>
-            <p class="feature-desc">Connect with travelers headed to the same destination. Share tips and meet potential travel buddies.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <h3 class="feature-title">Interactive Maps</h3>
-            <p class="feature-desc">Explore destinations with our detailed maps showing points of interest, routes, and local recommendations.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M8 19v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"></path><path d="M8 2h8v5H8z"></path><path d="M5 19v-4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"></path></svg>
-            </div>
-            <h3 class="feature-title">Weather Forecasts</h3>
-            <p class="feature-desc">Plan better with accurate weather forecasts for your destinations throughout your travel dates.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            </div>
-            <h3 class="feature-title">AI Documentation</h3>
-            <p class="feature-desc">Access comprehensive travel guides and documentation generated by AI for any destination.</p>
-          </div>
-          
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-            </div>
-            <h3 class="feature-title">Data Scraper</h3>
-            <p class="feature-desc">Get the latest travel deals and information automatically collected from across the web.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Chatbot Section -->
-    <section class="chatbot-section" id="chatbot">
-      <div class="container">
-        <div class="section-header">
-          <h2>Smart Itinerary Planner</h2>
-          <p>Ask our AI assistant anything about your travel plans and get personalized recommendations.</p>
+          <h3>AI Travel Chatbot</h3>
+          <p>Get instant answers to all your travel questions with our intelligent assistant trained on travel data.</p>
         </div>
         
-        <div class="chatbot-container">
-          <div class="chatbot-header">
-            <div class="chatbot-icon">
-              <span>💬</span>
-            </div>
-            <h3>Travel Assistant</h3>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          
-          <div class="chatbot-frame">
-            <iframe
-              src="https://www.chatbase.co/chatbot-iframe/k02nLd-9lz_j0No33lcaN"
-              width="100%"
-              height="600"
-              frameborder="0"
-            ></iframe>
-            <script
-              src="https://www.chatbase.co/embed.min.js"
-              id="chatbase-script"
-              defer
-            ></script>
+          <h3>Travel Chatrooms</h3>
+          <p>Connect with travelers headed to the same destination. Share tips and meet potential travel buddies.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
+          <h3>Interactive Maps</h3>
+          <p>Explore destinations with our detailed maps showing points of interest, routes, and local recommendations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
+          <h3>Weather Forecasts</h3>
+          <p>Plan better with accurate weather forecasts for your destinations throughout your travel dates.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+          </div>
+          <h3>AI Documentation</h3>
+          <p>Access comprehensive travel guides and documentation generated by AI for any destination.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 3L12 12M21 3L16 21L12 12M21 3L3 8L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Data Scraper</h3>
+          <p>Get the latest travel deals and information automatically collected from across the web.</p>
         </div>
       </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-container">
+    </div>
+  </section>
+  
+  <!-- Chatbot Section -->
+  <section class="chatbot-section" id="chatbot">
+    <div class="container">
+      <div class="section-header">
+        <h2>Smart Itinerary Planner</h2>
+        <p>Ask our AI assistant anything about your travel plans and get personalized recommendations.</p>
+      </div>
+      
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <div class="chatbot-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Travel Assistant</h3>
+        </div>
+        
+        <div class="chatbot-frame">
+          <iframe
+            src="https://www.chatbase.co/chatbot-iframe/k02nLd-9lz_j0No33lcaN"
+            width="100%"
+            style="height: 600px; min-height: 600px;"
+            frameborder="0"
+            class="bg-transparent"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div>
           <div class="footer-brand">
             <span class="text-primary">Smart</span>Travel Nexus
           </div>
-          
-          <div class="footer-links">
-            <div class="footer-column">
-              <h3>Navigation</h3>
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-column">
-              <h3>Features</h3>
-              <ul>
-                <li><a href="#chatbot">Chatbot</a></li>
-                <li><a href="#">Chatroom</a></li>
-                <li><a href="#">Maps</a></li>
-                <li><a href="#">Weather</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-column">
-              <h3>Contact</h3>
-              <ul>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Partners</a></li>
-              </ul>
-            </div>
-          </div>
+          <p class="mt-4 text-gray text-sm">
+            AI-powered travel planning made simple. Discover, plan, and connect with fellow travelers.
+          </p>
         </div>
         
-        <div class="footer-bottom">
-          <p>© 2025 Smart Travel Nexus. All rights reserved.</p>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="#chatbot">AI Chatbot</a></li>
+              <li><a href="#chatrooms">Travel Chatrooms</a></li>
+              <li><a href="#maps">Interactive Maps</a></li>
+              <li><a href="#weather">Weather Forecasts</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press Kit</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </footer>
-    
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Initialize custom dropdowns in the navigation
-        const dropdownBtns = document.querySelectorAll('.dropbtn');
-        dropdownBtns.forEach(btn => {
-          btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const dropdownContent = this.nextElementSibling;
-            dropdownContent.classList.toggle('show');
-          });
-        });
+      
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Smart Travel Nexus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-        // Close dropdowns when clicking outside
-        window.addEventListener('click', function(e) {
-          if (!e.target.matches('.dropbtn')) {
-            const dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(dropdown => {
-              if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-              }
-            });
-          }
-        });
-      });
-    </script>
-  </body>
+  <script src="vacationSearch.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
